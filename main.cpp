@@ -14,6 +14,11 @@ class Node {
         }
 };
 
+class BinaryTree {
+    public:
+        Node *ROOT;
+};
+
 int main() {
     return 0;
 }
