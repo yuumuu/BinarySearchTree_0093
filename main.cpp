@@ -21,6 +21,22 @@ class BinaryTree {
         BinaryTree() {
             ROOT = NULL; // init ROOT to null
         }
+
+        void insert() {
+            int x;
+            cout << "Masukkan nilai : ";
+            cin >> x;
+
+            // step 1: allocate memory for the new node
+            Node *nb = new Node();
+
+            // step 2: assign value to the data field of new node
+            nb->info = x;
+
+            // step 3: make the left and right child of the new node point to null
+            nb->left = NULL;
+            nb->right = NULL;
+        }
 };
 
 int main() {
