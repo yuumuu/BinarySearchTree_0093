@@ -81,6 +81,11 @@ class BinaryTree {
             }
         }
 
+        bool isEmpty() {
+            // checks if the tree is empty
+            return ROOT == NULL;
+        }
+
         void inorder(Node *ptr) {
             if (isEmpty()) {
                 cout << "Tree is empty" << endl;
