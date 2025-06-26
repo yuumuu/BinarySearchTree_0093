@@ -69,7 +69,16 @@ class BinaryTree {
         }
 
         void search(int e, Node *&parent, Node *&current) {
-            
+            // this function searches the current of the specified node as well as the current node of its parent
+            current = ROOT;
+            parent = NULL;
+            while ((current != NULL) && (current->info != e)) {
+                parent = current;
+                if (e < current->info)
+                    current = current->left;
+                else
+                    current = current->right;
+            }
         }
 };
 
