@@ -9,8 +9,8 @@ class Node {
 
         // Constructor for the node class
         Node() {
-            left = NULL; // init left to null
-            right = NULL; // init left to null
+            left = nullptr; // init left to null
+            right = nullptr; // init left to null
         }
 };
 
@@ -19,7 +19,7 @@ class BinaryTree {
         Node *ROOT;
 
         BinaryTree() {
-            ROOT = NULL; // init ROOT to null
+            ROOT = nullptr; // init ROOT to null
         }
 
         void insert() {
@@ -34,16 +34,16 @@ class BinaryTree {
             nb->info = x;
 
             // step 3: make the left and right child of the new node point to null
-            nb->left = NULL;
-            nb->right = NULL;
+            nb->left = nullptr;
+            nb->right = nullptr;
 
             // step 4: locate the node which will be the parent of the node to be inserted
-            Node *parent = NULL;
-            Node *current = NULL;
+            Node *parent = nullptr;
+            Node *current = nullptr;
             search(x, parent, current);
 
             // step 5: if parent is null (tree is empty)
-            if (parent == NULL) {
+            if (parent == nullptr) {
                 // 5a: mark the new node as ROOT
                 ROOT = nb;
 
@@ -71,8 +71,8 @@ class BinaryTree {
         void search(int e, Node *&parent, Node *&current) {
             // this function searches the current of the specified node as well as the current node of its parent
             current = ROOT;
-            parent = NULL;
-            while ((current != NULL) && (current->info != e)) {
+            parent = nullptr;
+            while ((current != nullptr) && (current->info != e)) {
                 parent = current;
                 if (e < current->info)
                     current = current->left;
@@ -82,7 +82,7 @@ class BinaryTree {
         }
 
         bool isEmpty() { // checks if the tree is empty
-            return ROOT == NULL;
+            return ROOT == nullptr;
         }
 
         // traverse: lEFT -> ROOT -> RIGHT
@@ -92,7 +92,7 @@ class BinaryTree {
                 return;
             }
 
-            if (ptr == NULL)
+            if (ptr == nullptr)
                 return;
 
             inorder(ptr->left);
@@ -107,7 +107,7 @@ class BinaryTree {
                 return;
             }
 
-            if (ptr == NULL)
+            if (ptr == nullptr)
                 return;
 
             cout << ptr->info << " "; // parent
@@ -122,7 +122,7 @@ class BinaryTree {
                 return;
             }
 
-            if (ptr == NULL)
+            if (ptr == nullptr)
                 return;
 
             postorder(ptr->left);
