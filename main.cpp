@@ -67,6 +67,10 @@ class BinaryTree {
                 return;
             }
         }
+
+        void search(int e, Node *&parent, Node *&current) {
+            
+        }
 };
 
 int main() {
