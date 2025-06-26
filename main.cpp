@@ -36,6 +36,16 @@ class BinaryTree {
             // step 3: make the left and right child of the new node point to null
             nb->left = NULL;
             nb->right = NULL;
+
+            // step 4: locate the node which will be the parent of the node to be inserted
+            Node *parent = NULL;
+            Node *current = NULL;
+            search(x, parent, current);
+
+            // step 5: if parent is null (tree is empty)
+            if (parent == NULL) {
+                
+            }
         }
 };
 
