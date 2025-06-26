@@ -114,6 +114,21 @@ class BinaryTree {
             preorder(ptr->left);
             preorder(ptr->right);
         }
+
+        // traverse: LEFT -> RIGHT -> ROOT
+        void postorder(Node *ptr) { 
+            if (isEmpty()) {
+                cout << "Tree is empty" << endl;
+                return;
+            }
+
+            if (ptr == NULL)
+                return;
+
+            postorder(ptr->left);
+            postorder(ptr->right);
+            cout << ptr->info << " "; // parent
+        }
 };
 
 int main() {
