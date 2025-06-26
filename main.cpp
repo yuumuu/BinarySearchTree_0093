@@ -58,6 +58,13 @@ class BinaryTree {
 
                 // 6b: exit
                 return;
+            } else if (x > parent->info) {
+                // if the value in the data field of the new node is greated than that of the parent
+                // 7a: make the right child of parent point to the new node
+                parent->right = nb;
+
+                // 7b: exit
+                return;
             }
         }
 };
