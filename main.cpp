@@ -44,7 +44,11 @@ class BinaryTree {
 
             // step 5: if parent is null (tree is empty)
             if (parent == NULL) {
-                
+                // 5a: mark the new node as ROOT
+                ROOT = nb;
+
+                // 5b: exit
+                return;
             }
         }
 };
