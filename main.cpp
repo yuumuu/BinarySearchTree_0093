@@ -132,5 +132,41 @@ class BinaryTree {
 };
 
 int main() {
+    BinaryTree x;
+    
+    while (true) {
+        cout << endl << "Menu" << endl;
+        cout << "1. Insert Node" << endl;
+        cout << "2. InOrder Traversal" << endl;
+        cout << "3. PreOrder Traversal" << endl;
+        cout << "4. PostOrder Traversal" << endl;
+        cout << "5. Exit" << endl;
+        cout << endl << "Enter your choice (1-5): ";
+        char ch;
+
+        cin >> ch;
+        cout << endl;
+
+        switch (ch) {
+            case '1':
+                x.insert();
+                break;
+            case '2':
+                x.inorder(x.ROOT);
+                break;
+            case '3':
+                x.preorder(x.ROOT);
+                break;
+            case '4':
+                x.postorder(x.ROOT);
+                break;
+            case '5':
+                return 0;
+            default:
+                cout << "Invalid Option" << endl;
+                break;
+        }
+    }
+
     return 0;
 }
