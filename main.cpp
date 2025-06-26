@@ -87,9 +87,12 @@ class BinaryTree {
                 return;
             }
 
-            // if (ptr == NULL) {
-                
-            // }
+            if (ptr == NULL)
+                return;
+
+            inorder(ptr->left);
+            cout << ptr->info << " "; // parent
+            inorder(ptr->right);
         }
 };
 
